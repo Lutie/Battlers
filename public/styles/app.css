@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+  background-color: #454952;
+  min-height: 100vh;
+}
+
+#Title {
+  top: 0;
+  right: 0;
+  position: absolute;
+  color: white;
+  font-size: 36px;
+  padding: 4px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.modal-bg {
+  position: fixed;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  background-color: white;
+  z-index: 100;
+  position: fixed !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.unit-bar {
+  width: 100px !important;
+  height: 20px !important;
+}
+
+.val-selector {
+  max-width: 150px;
+}
+
+#ToolsMenu {
+  display: flex;
+  color: white;
+}
+
+#Battlers {
+  display: flex;
+}
+
+#Allies {
+  width: 40vw;
+}
+
+#Foes {
+  width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.unit-status.foe {
+  width: 48%;
+  box-sizing: border-box;
+  max-height: fit-content;
+}
+
+.unit-status {
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem !important;
+}
+
+.nes-progress.is-vitality::-moz-progress-bar {
+  background-color:#92cc41;
+}
+
+.nes-progress.is-mental::-moz-progress-bar {
+  background-color:#4172cc;
+}
+
+.nes-progress.is-chi::-moz-progress-bar {
+  background-color:#da831f;
+}
+
+.nes-progress.is-mana::-moz-progress-bar {
+  background-color:#41b7cc;
+}
+
+.nes-progress.is-endurance::-moz-progress-bar {
+  background-color:#ccc341;
+}
+
+.nes-progress.is-fortune::-moz-progress-bar {
+  background-color:#cc419e;
+}
+
+.nes-progress.is-exhaustion::-moz-progress-bar {
+  background-color:#747474;
+}
