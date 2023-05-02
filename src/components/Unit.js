@@ -21,6 +21,9 @@ function Unit({index, status, type, changesBattler}) {
           {status.pf}<progress onClick={() => changesBattler(type, index, 'pf')} title="Exhaustion (PF)" className="nes-progress is-exhaustion unit-bar" value={status.pf} max={status.pf_max}></progress>
         </p>
       }
+      {
+        type === 'foe' && <span className="level">Level {status.level}</span>
+      }
     </div>
   );
 }
