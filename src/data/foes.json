@@ -1,164 +1,46 @@
 {
-  "foes": [
+  "foes" : [
     {
       "name": "Lord Tarog",
-      "level": "(4+4+2) 10",
-      "ps_max": 0,
-      "pv_max": 81,
-      "pc_max": 36,
-      "pm_max": 0,
-      "pk_max": 28,
-      "pe_max": 51,
-      "ps": 0,
-      "pv": 81,
-      "pc": 36,
-      "pm": 0,
-      "pk": 21,
-      "pe": 51
-    },
-    {
-      "name": "1st Son (lancer)",
-      "level": "(4+4+0) 8",
-      "ps_max": 0,
-      "pv_max": 32,
-      "pc_max": 32,
-      "pm_max": 0,
-      "pk_max": 10,
-      "pe_max": 30,
-      "ps": 0,
-      "pv": 30,
-      "pc": 21,
-      "pm": 0,
-      "pk": 2,
-      "pe": 0
-    },
-    {
-      "name": "2nd Son (guardian)",
-      "level": "(4+4+0) 8",
-      "ps_max": 0,
-      "pv_max": 34,
-      "pc_max": 36,
-      "pm_max": 0,
-      "pk_max": 10,
-      "pe_max": 32,
-      "ps": 0,
-      "pv": 22,
-      "pc": 25,
-      "pm": 0,
-      "pk": 0,
-      "pe": 2
-    },
-    {
-      "name": "3th Son (hunter)",
-      "level": "(4+4+0) 8",
-      "ps_max": 0,
-      "pv_max": 28,
-      "pc_max": 32,
-      "pm_max": 0,
-      "pk_max": 10,
-      "pe_max": 26,
-      "ps": 0,
-      "pv": 28,
-      "pc": 19,
-      "pm": 0,
-      "pk": 1,
-      "pe": 26
-    },
-    {
-      "name": "4th Son (berserker)",
-      "level": "(4+4+0) 8",
-      "ps_max": 0,
-      "pv_max": 32,
-      "pc_max": 32,
-      "pm_max": 0,
-      "pk_max": 10,
-      "pe_max": 30,
-      "ps": 0,
-      "pv": 4,
-      "pc": 32,
-      "pm": 0,
-      "pk": 10,
-      "pe": 0
-    },
-    {
-      "name": "Panther",
-      "level": "(6+0+0) 6",
-      "ps_max": 0,
-      "pv_max": 32,
-      "pc_max": 0,
-      "pm_max": 0,
-      "pk_max": 10,
-      "pe_max": 24,
-      "ps": 0,
-      "pv": 0,
-      "pc": 0,
-      "pm": 0,
-      "pk": 1,
-      "pe": 0
-    },
-    {
-      "name": "Zombie A",
-      "level": "(2+2+0) 4",
-      "ps_max": 0,
-      "pv_max": 28,
-      "pc_max": 0,
-      "pm_max": 0,
-      "pk_max": 0,
-      "pe_max": 12,
-      "ps": 0,
-      "pv": 0,
-      "pc": 0,
-      "pm": 0,
-      "pk": 0,
-      "pe": 0
-    },
-    {
-      "name": "Zombie B",
-      "level": "(2+2+0) 4",
-      "ps_max": 0,
-      "pv_max": 28,
-      "pc_max": 0,
-      "pm_max": 0,
-      "pk_max": 0,
-      "pe_max": 12,
-      "ps": 0,
-      "pv": 0,
-      "pc": 0,
-      "pm": 0,
-      "pk": 0,
-      "pe": 0
-    },
-    {
-      "name": "Zombie C",
-      "level": "(2+2+0) 4",
-      "ps_max": 0,
-      "pv_max": 28,
-      "pc_max": 0,
-      "pm_max": 0,
-      "pk_max": 0,
-      "pe_max": 12,
-      "ps": 0,
-      "pv": 0,
-      "pc": 0,
-      "pm": 0,
-      "pk": 0,
-      "pe": 0
-    },
-    {
-      "name": "Zombie D",
-      "level": "(2+2+0) 4",
-      "ps_max": 0,
-      "pv_max": 28,
-      "pc_max": 0,
-      "pm_max": 0,
-      "pk_max": 0,
-      "pe_max": 12,
-      "ps": 0,
-      "pv": 0,
-      "pc": 0,
-      "pm": 0,
-      "pk": 0,
-      "pe": 0
+      "ethnic": "Dwarf",
+      "type": "npc",
+      "job": {
+        "title": "champion",
+        "attributes": ["con", "cha"],
+        "ressources": ["pv", "pk", "pe"],
+        "rank": 8,
+        "tradition": "",
+        "mastery": "while fighting multiple targets"
+      },
+      "adversity": {
+        "type": "adversary",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["con", "str"],
+        "high": ["cha", "dex"],
+        "mid": ["agi", "wil"],
+        "low": ["wis", "per"]
+      },
+      "sub_attributes": {
+        "sta": 14,
+        "siz": 8,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "mace",
+          "cat": 3
+        },
+        "secundary": {},
+        "defense": {
+          "name": "plate",
+          "cat": 4,
+          "imp": true
+        }
+      }
     }
   ]
 }

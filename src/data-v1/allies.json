@@ -1,0 +1,72 @@
+{
+  "allies": [
+    {
+      "name": "Sif",
+      "ps_max": 14,
+      "pv_max": 35,
+      "pc_max": 34,
+      "pm_max": 32,
+      "pk_max": 30,
+      "pe_max": 31,
+      "pf_max": 19,
+      "ps": 14,
+      "pv": 35,
+      "pc": 34,
+      "pm": 32,
+      "pk": 21,
+      "pe": 18,
+      "pf": 0
+    },
+    {
+      "name": "Akalus",
+      "ps_max": 20,
+      "pv_max": 28,
+      "pc_max": 40,
+      "pm_max": 40,
+      "pk_max": 20,
+      "pe_max": 20,
+      "pf_max": 10,
+      "ps": 20,
+      "pv": 5,
+      "pc": 40,
+      "pm": 28,
+      "pk": 5,
+      "pe": 12,
+      "pf": 0
+    },
+    {
+      "name": "Tico",
+      "ps_max": 26,
+      "pv_max": 68,
+      "pc_max": 54,
+      "pm_max": 0,
+      "pk_max": 25,
+      "pe_max": 48,
+      "pf_max": 16,
+      "ps": 26,
+      "pv": 68,
+      "pc": 48,
+      "pm": 0,
+      "pk": 9,
+      "pe": 24,
+      "pf": 0
+    },
+    {
+      "name": "Cyrus",
+      "ps_max": 26,
+      "pv_max": 29,
+      "pc_max": 33,
+      "pm_max": 0,
+      "pk_max": 25,
+      "pe_max": 29,
+      "pf_max": 20,
+      "ps": 26,
+      "pv": 29,
+      "pc": 12,
+      "pm": 0,
+      "pk": 6,
+      "pe": 23,
+      "pf": 0
+    }
+  ]
+}

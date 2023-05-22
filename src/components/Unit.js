@@ -1,29 +1,131 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {getModifier, getDefense} from '../unitCalculator';
 
-function Unit({index, status, type, changesBattler}) {
+function Unit({ index, status, type, changesBattler }) {
+  const [modalOpen, setModalOpen] = useState(false);
+
   const className = `unit-status nes-container is-dark with-title ${type}`;
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const displayAttribute = (att) => {
+    return `${att.toUpperCase()} ${status.attributes[att]} (+${getModifier(status.attributes[att])} D${getDefense(status.attributes[att])}) `;
+  };
+
+  const modalLines = [[], [], []];
+  ['str', 'dex', 'agi', 'con', 'per'].forEach((attribute, index) => {
+    modalLines[0].push(<span key={index}>{displayAttribute(attribute)}</span>);
+  });
+  ['cha', 'int', 'cun', 'wil', 'wis'].forEach((attribute, index) => {
+    modalLines[1].push(<span key={index}>{displayAttribute(attribute)}</span>);
+  });
+  ['luk', 'eqi', 'mag'].forEach((attribute, index) => {
+    modalLines[2].push(<span key={index}>{displayAttribute(attribute)}</span>);
+  });
 
   return (
     <div className={className}>
       <p className="title">{status.name}</p>
+      <span className="infos" onClick={openModal}>(?)</span>
       <p>
-        {status.pe}<progress onClick={() => changesBattler(type, index, 'pe')} title="Endurance (PE)" className="nes-progress is-endurance unit-bar" value={status.pe} max={status.pe_max}></progress>
-        {status.pv}<progress onClick={() => changesBattler(type, index, 'pv')} title="Vitality (PV)" className="nes-progress is-vitality unit-bar" value={status.pv} max={status.pv_max}></progress>
-        {status.ps}<progress onClick={() => changesBattler(type, index, 'ps')} title="Sanity (PS)" className="nes-progress is-mental unit-bar" value={status.ps} max={status.ps_max}></progress>
+        <span className="ressource">{status.ressources.pe.now}</span>
+        <progress
+          onClick={() => changesBattler(type, index, "pe")}
+          title="Endurance (PE)"
+          className="nes-progress is-endurance unit-bar"
+          value={status.ressources.pe.now}
+          max={status.ressources.pe.max}
+        ></progress>
+        {status.ressources.pv.now}
+        <progress
+          onClick={() => changesBattler(type, index, "pv")}
+          title="Vitality (PV)"
+          className="nes-progress is-vitality unit-bar"
+          value={status.ressources.pv.now}
+          max={status.ressources.pv.max}
+        ></progress>
+        {status.ressources.ps.now}
+        <progress
+          onClick={() => changesBattler(type, index, "ps")}
+          title="Sanity (PS)"
+          className="nes-progress is-mental unit-bar"
+          value={status.ressources.ps.now}
+          max={status.ressources.ps.max}
+        ></progress>
       </p>
       <p>
-        {status.pc}<progress onClick={() => changesBattler(type, index, 'pc')} title="Chi (PC)" className="nes-progress is-chi unit-bar" value={status.pc} max={status.pc_max}></progress>
-        {status.pm}<progress onClick={() => changesBattler(type, index, 'pm')} title="Mana (PM)" className="nes-progress is-mana unit-bar" value={status.pm} max={status.pm_max}></progress>
-        {status.pk}<progress onClick={() => changesBattler(type, index, 'pk')} title="Karma (PK)" className="nes-progress is-fortune unit-bar" value={status.pk} max={status.pk_max}></progress>
+        {status.ressources.pc.now}
+        <progress
+          onClick={() => changesBattler(type, index, "pc")}
+          title="Chi (PC)"
+          className="nes-progress is-chi unit-bar"
+          value={status.ressources.pc.now}
+          max={status.ressources.pc.max}
+        ></progress>
+        {status.ressources.pm.now}
+        <progress
+          onClick={() => changesBattler(type, index, "pm")}
+          title="Mana (PM)"
+          className="nes-progress is-mana unit-bar"
+          value={status.ressources.pm.now}
+          max={status.ressources.pm.max}
+        ></progress>
+        {status.ressources.pk.now}
+        <progress
+          onClick={() => changesBattler(type, index, "pk")}
+          title="Karma (PK)"
+          className="nes-progress is-fortune unit-bar"
+          value={status.ressources.pk.now}
+          max={status.ressources.pk.max}
+        ></progress>
       </p>
-      {status.pf_max &&
+      {status.pf_max && (
         <p>
-          {status.pf}<progress onClick={() => changesBattler(type, index, 'pf')} title="Exhaustion (PF)" className="nes-progress is-exhaustion unit-bar" value={status.pf} max={status.pf_max}></progress>
+          {status.ressources.pf.now}
+          <progress
+            onClick={() => changesBattler(type, index, "pf")}
+            title="Exhaustion (PF)"
+            className="nes-progress is-exhaustion unit-bar"
+            value={status.ressources.pf.now}
+            max={status.ressources.pf.max}
+          ></progress>
         </p>
-      }
-      {
-        type === 'foe' && <span className="level">Level {status.level}</span>
-      }
+      )}
+      {type === "foe" && <span className="level">Levels {status.threat.critical}/{status.threat.high}/{status.threat.mid}/{status.threat.low}/{status.threat.vlow}</span>}
+      {modalOpen && (
+          <div className="modal" onClick={closeModal}>
+            <div className="nes-container is-rounded is-dark with-title is-centered">
+              <p class="title">{status.name}</p>
+              <div className="modal-content">
+                <p>~ Bio ~</p>
+                <p>Origins {status.race} ({status.ethnic}), Title {status.job.title} ({status.job.rank})</p>
+                <br></br>
+                <p>~ Attributes ~</p>
+                <p>{modalLines[0]}</p>
+                <p>{modalLines[1]}</p>
+                <p>{modalLines[2]}</p>
+                <br></br>
+                <p>~ Saves ~</p>
+                <p>Fortitude {status.saves.fortitude}, Determination {status.saves.determination}, Reflexes {status.saves.reflexes}, Composure {status.saves.composure}, Opposition {status.saves.opposition}</p>
+                <br></br>
+                {
+                  type === "foe" && <>
+                    <p>~ Combat ~</p>
+                    <p>[{status.weaponry.primary.name.charAt(0).toUpperCase() + status.weaponry.primary.name.slice(1)} (C{status.weaponry.primary.cat})] : Offensive {status.combat.off}</p>
+                    <p>[{status.weaponry.defense.name.charAt(0).toUpperCase() + status.weaponry.defense.name.slice(1)} (C{status.weaponry.defense.cat})] : Resistance {status.combat.res}, Absorption {status.combat.abs}, Protection {status.combat.pro}</p>
+                    <br></br>
+                </>
+                }
+              </div>
+            </div>
+          </div>
+      )}
     </div>
   );
 }

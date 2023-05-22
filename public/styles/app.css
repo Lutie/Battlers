@@ -73,6 +73,10 @@
   flex-wrap: wrap;
 }
 
+.ressource {
+  padding-bottom: 2px;
+}
+
 .unit-status.foe {
   width: 48%;
   box-sizing: border-box;
@@ -80,6 +84,7 @@
 }
 
 .unit-status {
+  font-size: 14px !important;
   padding: 1.5rem 0.5rem 0.5rem 0.5rem !important;
 }
 
@@ -116,4 +121,19 @@
   bottom: 0;
   right: 0;
   position: absolute;
+}
+
+.infos {
+  font-size: 10px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+.modal {
+  font-size: 9px;
+}
+
+.modal p {
+  margin-bottom: 0;
 }
