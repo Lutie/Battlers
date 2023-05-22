@@ -32,7 +32,8 @@ function Unit({ index, status, type, changesBattler }) {
   return (
     <div className={className}>
       <p className="title">{status.name}</p>
-      <span className="infos" onClick={openModal}>(?)</span>
+      <span className="infos" onClick={openModal}> (?)</span>
+      <span className="rank">{status.job.title} ({status.job.rank})</span>
       <p>
         <span className="ressource">{status.ressources.pe.now}</span>
         <progress
@@ -101,10 +102,10 @@ function Unit({ index, status, type, changesBattler }) {
       {modalOpen && (
           <div className="modal" onClick={closeModal}>
             <div className="nes-container is-rounded is-dark with-title is-centered">
-              <p class="title">{status.name}</p>
+              <p className="title">{status.name}</p>
               <div className="modal-content">
                 <p>~ Bio ~</p>
-                <p>Origins {status.race} ({status.ethnic}), Title {status.job.title} ({status.job.rank})</p>
+                <p>Origins {status.race} ({status.ethnic})</p>
                 <br></br>
                 <p>~ Attributes ~</p>
                 <p>{modalLines[0]}</p>

@@ -13,8 +13,8 @@
         "mastery": "while fighting multiple targets"
       },
       "adversity": {
-        "type": "adversary",
-        "bonus": 0
+        "type": "enemy",
+        "bonus": 2
       },
       "affinity": {
         "critical": ["con", "str"],

@@ -130,6 +130,13 @@
   position: absolute;
 }
 
+.rank {
+  font-size: 10px;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
 .modal {
   font-size: 9px;
 }
