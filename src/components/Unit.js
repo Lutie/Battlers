@@ -120,9 +120,16 @@ function Unit({ index, status, type, changesBattler }) {
                     <p>~ Combat ~</p>
                     <p>[{status.weaponry.primary.name.charAt(0).toUpperCase() + status.weaponry.primary.name.slice(1)} (C{status.weaponry.primary.cat})] : Offensive {status.combat.off}</p>
                     <p>[{status.weaponry.defense.name.charAt(0).toUpperCase() + status.weaponry.defense.name.slice(1)} (C{status.weaponry.defense.cat})] : Resistance {status.combat.res}, Absorption {status.combat.abs}, Protection {status.combat.pro}</p>
+                    <p>[Distances] : Speed {status.combat.speed}, Treat (range) {status.combat.treat}, Control (range) {status.combat.control}</p>
                     <br></br>
+                    <p>~ Strategy ~</p>
+                    <p>Job's PC usage : {status.job.mastery}</p>
                 </>
                 }
+                <br></br>
+                <br></br>
+                <br></br>
+                <p>(click anywhere on this box to close)</p>
               </div>
             </div>
           </div>

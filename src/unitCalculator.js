@@ -70,6 +70,9 @@ export default function calculateUnit(unit) {
       unit.combat.off += getValuesBasedOnAdversity(unit).quality;
       unit.combat.abs += getValuesBasedOnAdversity(unit).quality;
     }
+    unit.combat.speed = 5 + getModifier(unit.sub_attributes.siz) + getModifier(unit.attributes.agi);
+    unit.combat.treat = unit.weaponry.defense.cat + getModifier(unit.sub_attributes.siz);
+    unit.combat.control = unit.weaponry.defense.cat + getModifier(unit.sub_attributes.sta);
   }
   return Object.assign(
     {
