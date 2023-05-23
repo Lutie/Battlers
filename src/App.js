@@ -15,9 +15,9 @@ function App() {
   // cookies.remove("foes");
   const savedGame = Object.assign(
     {},
-    {config: cookies.get("config") } || config,
-    {allies: cookies.get("allies")} || {allies: []},
-    {foes: cookies.get("foes")} || {foes: []},
+    cookies.get("config") !== undefined ? {config: cookies.get("config")} : config,
+    cookies.get("allies") !== undefined ? {allies: cookies.get("allies")} : {allies: []},
+    cookies.get("foes") !== undefined ? {foes: cookies.get("foes")} : {foes: []},
   );
   console.log(savedGame)
   const [game, setGame] = useState(savedGame);
