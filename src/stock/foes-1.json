@@ -1,0 +1,181 @@
+{
+  "foes" : [
+    {
+      "name": "Fidenziano D'Orio",
+      "ethnic": "Emperian",
+      "type": "npc",
+      "job": {
+        "title": "inquisitor",
+        "attributes": ["agi", "con"],
+        "ressources": ["pv", "pk", "pm"],
+        "tradition": "wil",
+        "mastery": "while using materias"
+      },
+      "adversity": {
+        "type": "nemesis",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["agi", "str"],
+        "high": ["con", "dex"],
+        "mid": ["wil", "per"],
+        "low": ["cha", "wit"]
+      },
+      "sub_attributes": {
+        "sta": 12,
+        "siz": 12,
+        "ego": 12,
+        "app": 12
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "scythe",
+          "cat": 4
+        },
+        "secundary": {},
+        "defense": {
+          "name": "plate",
+          "cat": 4,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Penetrating (-5) : Ignore 10 absorption",
+          "Sadistic (-6) : Double wound gravity if any on that spot"
+        ],
+        "actions": [
+          "(pre) Haste (Q5) materia level 5",
+          "Parry / Counter-Attack",
+          "Fire (Q5) materia level 5",
+          "Dispel (Q5) materia level 5"
+        ],
+        "style": "Adds 5 initiative to its checks when cloacked by shadows"
+      }
+    },
+    {
+      "name": "Durandal Boros",
+      "ethnic": "Emperian",
+      "type": "npc",
+      "job": {
+        "title": "inquisitor",
+        "attributes": ["dex", "con"],
+        "ressources": ["pv", "pk", "pc"],
+        "tradition": "wil",
+        "mastery": "while using materias"
+      },
+      "adversity": {
+        "type": "legend",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["dex", "str"],
+        "high": ["per", "wil"],
+        "mid": ["con", "cha"],
+        "low": ["wis", "agi"]
+      },
+      "sub_attributes": {
+        "sta": 12,
+        "siz": 12,
+        "ego": 12,
+        "app": 12
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "claymore",
+          "cat": 4
+        },
+        "secundary": {},
+        "defense": {
+          "name": "plate",
+          "cat": 4,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Zone (-4) : Attack 3 close targets",
+          "Travaillée (+2) : Speed rank -5"
+        ],
+        "actions": [
+          "Sweep (move + attack on the way)",
+          "Attacks while aiming for the head (gravity x1.5, disavantage vs DPER+5)",
+          "Attacks while aiming for the arms (gravity x1.5, disavantage vs DDEX+5)",
+          "Attacks while aiming for the legs (gravity x1.5, disavantage vs DAGI+5)",
+          "Attacks while aiming for a sub part (gravity x1.5, protection -5, disavantage vs DATT+10)",
+          "(pre) Haste (Q5) materia level 5",
+          "Ultima (Q5) materia level 5",
+          "Dispel (Q5) materia level 5",
+          "(chi) 1 PC for target's protection -1"
+        ],
+        "style": "Adds 3 damage and get a bonus of 2 on attack while aiming"
+      }
+    },
+    {
+      "name": "L.A.S",
+      "ethnic": "Cyborg",
+      "type": "npc",
+      "job": {
+        "title": "swordman",
+        "attributes": ["dex", "agi"],
+        "ressources": ["pv", "pv", "pc"],
+        "tradition": "",
+        "mastery": "fighting against strenght oriented adversary"
+      },
+      "adversity": {
+        "type": "adversary",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["dex", "agi"],
+        "high": ["str", "per"],
+        "mid": ["wit", "int"],
+        "low": ["wil", "wis"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "katana",
+          "cat": 4
+        },
+        "secundary": {},
+        "defense": {
+          "name": "cloth",
+          "cat": 1,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Zone (-4) : Attack 3 close targets",
+          "Hasty (-5) : Rapidity rank +5"
+        ],
+        "actions": [
+          "Throw (have 3 of them) and cut a flower to generate whirlwind zone (5c, one turn) (all but her are disavantaged while targeting someone there)",
+          "Attempt to double attack throught rapidity",
+          "Attempt to disarm targets",
+          "Attacks while aiming for the arms (gravity x1.5, disavantage vs DDEX+5)",
+          "(steam) 1 PC for reducing by 1 init cost for quick actions (defenses or twice attacks alike)",
+          "(steam) 1 PC for getting a free defense test",
+          "(steam) 1 PC for a 1 cell replacement after a successfull flee action"
+        ],
+        "style": "In a whirlwind others gets -3, also gets +2 at rapidity (doubled in whirlwind)",
+        "passives": [
+          "Constitution is structure but vitality remains"
+        ]
+      },
+      "bonus": {
+        "dex": 2,
+        "agi": 2
+      }
+    }
+  ]
+}

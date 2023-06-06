@@ -1,47 +1,179 @@
 {
   "allies" : [
     {
-      "name": "John Doe",
+      "name": "Tico de Terkone",
       "type": "pc",
-      "race": "human",
-      "ethnic": "emperien",
+      "race": "dwarf",
+      "ethnic": "?",
       "job": {
         "title": "warrior",
         "attributes": ["str", "con"],
         "ressources": ["pv", "pv", "pk"],
-        "rank": 6,
+        "rank": 7,
         "tradition": "",
         "mastery": "when have the weapon advantage"
       },
       "attributes": {
-        "str": 14,
-        "dex": 16,
-        "agi": 12,
-        "con": 14,
-        "per": 10,
-        "cha": 10,
+        "str": 27,
+        "dex": 18,
+        "agi": 19,
+        "con": 27,
+        "per": 16,
+        "cha": 8,
         "int": 8,
-        "cun": 12,
-        "wil": 12,
+        "cun": 8,
+        "wil": 15,
         "wis": 8,
-        "luk": 12,
+        "luk": 9,
         "mag": 0
       },
       "sub_attributes": {
-        "sta": 12,
+        "sta": 16,
+        "siz": 7,
+        "ego": 13,
+        "app": 7
+      },
+      "skills": {
+        "fortitude": 0,
+        "determination": 0,
+        "reflexes": 0,
+        "composure": 0,
+        "opposition": 0
+      },
+      "bonus": {
+        "pe": 2,
+        "eqi": 2
+      }
+    },
+    {
+      "name": "Sif",
+      "type": "pc",
+      "race": "semie",
+      "ethnic": "naggan",
+      "job": {
+        "title": "thief",
+        "attributes": ["agi", "dex"],
+        "ressources": ["pv", "pe", "pk"],
+        "rank": 5,
+        "tradition": "cun",
+        "mastery": "???"
+      },
+      "attributes": {
+        "str": 14,
+        "dex": 18,
+        "agi": 18,
+        "con": 12,
+        "per": 14,
+        "cha": 12,
+        "int": 10,
+        "cun": 16,
+        "wil": 7,
+        "wis": 16,
+        "luk": 9,
+        "mag": 16
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 11
+      },
+      "skills": {
+        "fortitude": 0,
+        "determination": 0,
+        "reflexes": 0,
+        "composure": 0,
+        "opposition": 0
+      },
+      "bonus": {
+        "agi": 2,
+        "dex": 2
+      }
+    },
+    {
+      "name": "Cyrus",
+      "type": "pc",
+      "race": "human",
+      "ethnic": "emperian",
+      "job": {
+        "title": "duellist",
+        "attributes": ["agi", "cha"],
+        "ressources": ["pv", "pe", "pk"],
+        "rank": 5,
+        "tradition": "",
+        "mastery": "???"
+      },
+      "attributes": {
+        "str": 12,
+        "con": 12,
+        "dex": 18,
+        "agi": 14,
+        "per": 16,
+        "cha": 14,
+        "int": 11,
+        "cun": 13,
+        "wil": 13,
+        "wis": 11,
+        "luk": 10,
+        "mag": 0
+      },
+      "sub_attributes": {
+        "sta": 11,
+        "siz": 10,
+        "ego": 11,
+        "app": 13
+      },
+      "skills": {
+        "fortitude": 0,
+        "determination": 0,
+        "reflexes": 0,
+        "composure": 0,
+        "opposition": 0
+      },
+      "bonus": {
+      }
+    },
+    {
+      "name": "Akalus",
+      "type": "pc",
+      "race": "human",
+      "ethnic": "okkan",
+      "job": {
+        "title": "diacre",
+        "attributes": ["wis", "mag"],
+        "ressources": ["pm", "pm", "ps"],
+        "rank": 5,
+        "tradition": "",
+        "mastery": "???"
+      },
+      "attributes": {
+        "str": 11,
+        "con": 14,
+        "dex": 10,
+        "agi": 10,
+        "per": 10,
+        "cha": 10,
+        "int": 15,
+        "cun": 18,
+        "wil": 10,
+        "wis": 20,
+        "luk": 10,
+        "mag": 20
+      },
+      "sub_attributes": {
+        "sta": 10,
         "siz": 10,
         "ego": 10,
         "app": 10
       },
       "skills": {
-        "fortitude": 5,
-        "determination": 3,
-        "reflexes": 4,
-        "composure": 2,
-        "opposition": 2
+        "fortitude": 0,
+        "determination": 0,
+        "reflexes": 0,
+        "composure": 0,
+        "opposition": 0
       },
       "bonus": {
-        "pe": 2
       }
     }
   ]

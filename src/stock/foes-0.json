@@ -1,0 +1,526 @@
+{
+  "foes" : [
+    {
+      "name": "Feral Inquisitor",
+      "ethnic": "Okkan",
+      "type": "npc",
+      "job": {
+        "title": "inquisitor",
+        "attributes": ["agi", "dex"],
+        "ressources": ["pv", "pk", "pm"],
+        "tradition": "wil",
+        "mastery": "while using materias"
+      },
+      "adversity": {
+        "type": "enemy",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["agi", "str"],
+        "high": ["con", "wil"],
+        "mid": ["dex", "per"],
+        "low": ["cha", "cun"]
+      },
+      "sub_attributes": {
+        "sta": 12,
+        "siz": 12,
+        "ego": 12,
+        "app": 12
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "spear",
+          "cat": 4
+        },
+        "secundary": {},
+        "defense": {
+          "name": "plate",
+          "cat": 4,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Penetrating (-3) : Ignore 6 absorption"
+        ],
+        "actions": [
+          "(pre) Shield (Q3) materia level 3",
+          "Parry / Counter-Attack",
+          "Fire (Q3) materia level 3",
+          "Ice (Q3) materia level 3",
+          "Lightning (Q3) materia level 3"
+        ],
+        "style": "(3) May counter-attack cunh materia activation",
+        "passives": [
+          "Magic = 18 because of lyrium quality 4",
+          "(enchant) shield 15",
+          "(enchant) ignores up to 3 penalty based on view",
+          "(poison) (DD 12 vs Determination) feeble",
+          "(poison) (DD 12 vs Fortitude) bleeding"
+        ]
+      }
+    },
+    {
+      "name": "Elven Inquisitor",
+      "ethnic": "Eldrazan",
+      "type": "npc",
+      "job": {
+        "title": "inquisitor",
+        "attributes": ["agi", "dex"],
+        "ressources": ["pv", "pk", "pm"],
+        "tradition": "wil",
+        "mastery": "while using materias"
+      },
+      "adversity": {
+        "type": "enemy",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["agi", "dex"],
+        "high": ["per", "wil"],
+        "mid": ["luk", "cun"],
+        "low": ["int", "wis"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "longsword",
+          "cat": 3
+        },
+        "secundary": {
+          "name": "shortsword",
+          "cat": 3
+        },
+        "defense": {
+          "name": "mail",
+          "cat": 3,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Penetrating (-3) : Ignore 6 absorption",
+          "Poisoning (-2) : Poison difficulty increased by +4"
+        ],
+        "actions": [
+          "(pre) Haste (Q3) materia level 3",
+          "Parry / Counter-Attack",
+          "Dark (Q3) materia level 3",
+          "Holy (Q3) materia level 3",
+          "Bleeding (Q3) materia level 3"
+        ],
+        "style": "(3) After an attack may replace himself by up to 3 cells for free",
+        "passives": [
+          "Magic = 18 because of lyrium quality 4",
+          "(enchant) shield 15",
+          "(enchant) ignores up to 3 penalty based on view",
+          "(poison) (DD 12 vs Determination) feeble",
+          "(poison) (DD 12 vs Fortitude) bleeding"
+        ]
+      }
+    },
+    {
+      "name": "Mage Inquisitor",
+      "ethnic": "Attilian",
+      "type": "npc",
+      "job": {
+        "title": "sorcerer",
+        "attributes": ["cun", "mag"],
+        "ressources": ["pm", "pe", "pm"],
+        "tradition": "cun",
+        "mastery": "while casting dark magics"
+      },
+      "adversity": {
+        "type": "enemy",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["mag", "cun"],
+        "high": ["agi", "int"],
+        "mid": ["wis", "per"],
+        "low": ["dex", "con"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "rod",
+          "cat": 2
+        },
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Penetrating (-3) : Ignore 6 absorption"
+        ],
+        "actions": [
+          "(pre) Dark Elemental - summon level 3",
+          "(pre) Dark Shroud - 50% cover because of darkness around self",
+          "(cast) Myriad of Dark Arrows (DD 16+2/Lv) - Casts 3 arrows for 3 different targets",
+          "(cast) Fog of Darkness (DD 14+2/Lv) - in an area everyone have level view related penalty",
+          "Shield (Q3) materia level 3"
+        ],
+        "style": "(3) After a cast may replace himself by up to 3 cells for free",
+        "passives": [
+          "Magic = 18 because of lyrium quality 4",
+          "(enchant) shield 15",
+          "(enchant) ignores up to 3 penalty based on view",
+          "(poison) (DD 12 vs Determination) feeble",
+          "(poison) (DD 12 vs Fortitude) bleeding"
+        ]
+      }
+    },
+    {
+      "name": "Elemental of Darkness",
+      "ethnic": "Monster",
+      "type": "npc",
+      "job": {
+        "title": "elemental",
+        "attributes": ["agi", "per"],
+        "ressources": [],
+        "tradition": "",
+        "mastery": "none"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 3
+      },
+      "affinity": {
+        "critical": ["agi", "per"],
+        "high": ["dex", "cun"],
+        "mid": ["dex", "cha"],
+        "low": ["wis", "con"]
+      },
+      "sub_attributes": {
+        "sta": 14,
+        "siz": 14,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "natural",
+          "cat": 2
+        },
+        "defense": {
+          "name": "natural",
+          "cat": 0,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Penetrating (-3) : Ignore 6 absorption"
+        ],
+        "actions": [
+          "???"
+        ],
+        "passives": [
+          "came in game with 15 power spell"
+        ]
+      }
+    },
+    {
+      "name": "Silent Assassin",
+      "ethnic": "Unknown",
+      "type": "npc",
+      "job": {
+        "title": "assasin",
+        "attributes": ["agi", "dex"],
+        "ressources": ["pv", "pc", "pk"],
+        "tradition": "",
+        "mastery": "while attacking unseen"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["agi", "dex"],
+        "high": ["per", "cun"],
+        "mid": ["int", "str"],
+        "low": ["cha", "con"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "katar",
+          "cat": 3
+        },
+        "secundary": {
+          "name": "throw dagger",
+          "cat": 1
+        },
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Poisoning (-2) : Poison difficulty increased by +4"
+        ],
+        "actions": [
+          "Tries to lose others and blend into the background"
+        ],
+        "passives": [
+          "(enchant) ignores up to 3 penalty based on view",
+          "(poison) (DD 14 vs Determination) feeble",
+          "(poison) (DD 14 vs Fortitude) bleeding"
+        ]
+      }
+    },
+    {
+      "name": "Bold Assassin",
+      "ethnic": "Unknown",
+      "type": "npc",
+      "job": {
+        "title": "assasin",
+        "attributes": ["agi", "dex"],
+        "ressources": ["pv", "pc", "pk"],
+        "tradition": "",
+        "mastery": "while attacking unseen"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["agi", "dex"],
+        "high": ["per", "cun"],
+        "mid": ["int", "str"],
+        "low": ["cha", "con"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "katar",
+          "cat": 3
+        },
+        "secundary": {
+          "name": "throw dagger",
+          "cat": 1
+        },
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Poisoning (-2) : Poison difficulty increased by +4"
+        ],
+        "actions": [
+          "Tries to lose others and blend into the background"
+        ],
+        "passives": [
+          "(enchant) ignores up to 3 penalty based on view",
+          "(poison) (DD 12 vs Determination) feeble",
+          "(poison) (DD 12 vs Fortitude) bleeding"
+        ]
+      }
+    },
+    {
+      "name": "Raven Assassin",
+      "ethnic": "Unknown",
+      "type": "npc",
+      "job": {
+        "title": "assasin",
+        "attributes": ["agi", "dex"],
+        "ressources": ["pv", "pc", "pk"],
+        "tradition": "",
+        "mastery": "while attacking unseen"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["agi", "dex"],
+        "high": ["per", "cun"],
+        "mid": ["int", "str"],
+        "low": ["cha", "con"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "katar",
+          "cat": 3
+        },
+        "secundary": {
+          "name": "throw dagger",
+          "cat": 1
+        },
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Poisoning (-2) : Poison difficulty increased by +4"
+        ],
+        "actions": [
+          "Tries to lose others and blend into the background"
+        ],
+        "passives": [
+          "(enchant) ignores up to 3 penalty based on view",
+          "(poison) (DD 12 vs Determination) feeble",
+          "(poison) (DD 12 vs Fortitude) bleeding"
+        ]
+      }
+    },
+    {
+      "name": "Valiant Assassin",
+      "ethnic": "Unknown",
+      "type": "npc",
+      "job": {
+        "title": "assasin",
+        "attributes": ["agi", "dex"],
+        "ressources": ["pv", "pc", "pk"],
+        "tradition": "",
+        "mastery": "while attacking unseen"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["agi", "dex"],
+        "high": ["per", "cun"],
+        "mid": ["int", "str"],
+        "low": ["cha", "con"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "katar",
+          "cat": 3
+        },
+        "secundary": {
+          "name": "throw dagger",
+          "cat": 1
+        },
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Poisoning (-2) : Poison difficulty increased by +4"
+        ],
+        "actions": [
+          "Tries to lose others and blend into the background"
+        ],
+        "passives": [
+          "(enchant) ignores up to 3 penalty based on view",
+          "(poison) (DD 12 vs Determination) feeble",
+          "(poison) (DD 12 vs Fortitude) bleeding"
+        ]
+      }
+    },
+    {
+      "name": "Curious Assassin",
+      "ethnic": "Unknown",
+      "type": "npc",
+      "job": {
+        "title": "assasin",
+        "attributes": ["agi", "dex"],
+        "ressources": ["pv", "pc", "pk"],
+        "tradition": "",
+        "mastery": "while attacking unseen"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["agi", "dex"],
+        "high": ["per", "cun"],
+        "mid": ["int", "str"],
+        "low": ["cha", "con"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "katar",
+          "cat": 3
+        },
+        "secundary": {
+          "name": "throw dagger",
+          "cat": 1
+        },
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Poisoning (-2) : Poison difficulty increased by +4"
+        ],
+        "actions": [
+          "Tries to lose others and blend into the background"
+        ],
+        "passives": [
+          "(enchant) ignores up to 3 penalty based on view",
+          "(poison) (DD 12 vs Determination) feeble",
+          "(poison) (DD 12 vs Fortitude) bleeding"
+        ]
+      }
+    }
+  ]
+}

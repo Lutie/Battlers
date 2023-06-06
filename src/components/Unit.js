@@ -98,7 +98,7 @@ function Unit({ index, status, type, changesBattler }) {
           ></progress>
         </p>
       )}
-      {type === "foe" && <span className="level">Levels {status.threat.critical}/{status.threat.high}/{status.threat.mid}/{status.threat.low}/{status.threat.vlow}</span>}
+      {type === "foe" && <span className="level">Level {status.threat.critical}</span>}
       {modalOpen && (
           <div className="modal" onClick={closeModal}>
             <div className="nes-container is-rounded is-dark with-title is-centered">
@@ -112,19 +112,41 @@ function Unit({ index, status, type, changesBattler }) {
                 <p>{modalLines[1]}</p>
                 <p>{modalLines[2]}</p>
                 <br></br>
-                <p>~ Saves ~</p>
-                <p>Fortitude {status.saves.fortitude}, Determination {status.saves.determination}, Reflexes {status.saves.reflexes}, Composure {status.saves.composure}, Opposition {status.saves.opposition}</p>
-                <br></br>
                 {
                   type === "foe" && <>
+                    <p>~ Skills check ~</p>
+                    <p>Primary skills : +{status.threat.critical}, Secundary skills : +{status.threat.high}, Tertiary skills : +{status.threat.mid}</p>
+                    <p>Initiative : +{status.saves.initiative}</p>
+                    <br></br>
+                    <p>~ Saves ~</p>
+                    <p>Fortitude +{status.saves.fortitude}, Determination +{status.saves.determination}, Reflexes +{status.saves.reflexes}, Composure +{status.saves.composure}, Opposition +{status.saves.opposition}</p>
+                    <br></br>
                     <p>~ Combat ~</p>
-                    <p>[{status.weaponry.primary.name.charAt(0).toUpperCase() + status.weaponry.primary.name.slice(1)} (C{status.weaponry.primary.cat})] : Offensive {status.combat.off}</p>
+                    <p>[{status.weaponry.primary.name.charAt(0).toUpperCase() + status.weaponry.primary.name.slice(1)} (C{status.weaponry.primary.cat})] : Offensive {status.combat.off}+{2+status.weaponry.primary.cat}D6</p>
                     <p>[{status.weaponry.defense.name.charAt(0).toUpperCase() + status.weaponry.defense.name.slice(1)} (C{status.weaponry.defense.cat})] : Resistance {status.combat.res}, Absorption {status.combat.abs}, Protection {status.combat.pro}</p>
                     <p>[Distances] : Speed {status.combat.speed}, Treat (range) {status.combat.treat}, Control (range) {status.combat.control}</p>
                     <br></br>
                     <p>~ Strategy ~</p>
                     <p>Job's PC usage : {status.job.mastery}</p>
-                </>
+                    {
+                      status.strategy.maneuvers && status.strategy.maneuvers.map((maneuver) => {
+                        return <p>(maneuver) {maneuver}</p>
+                      })
+                    }
+                    {
+                      status.strategy.actions && status.strategy.actions.map((action) => {
+                        return <p>(action) {action}</p>
+                      })
+                    }
+                    {
+                      status.strategy.style && <p>(style) {status.strategy.style}</p>
+                    }
+                    {
+                      status.strategy.passives && status.strategy.passives.map((passive) => {
+                        return <p>(passive) {passive}</p>
+                      })
+                    }
+                  </>
                 }
                 <br></br>
                 <br></br>

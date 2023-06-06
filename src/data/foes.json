@@ -1,38 +1,37 @@
 {
   "foes" : [
     {
-      "name": "Lord Tarog",
-      "ethnic": "Dwarf",
+      "name": "Fidenziano D'Orio",
+      "ethnic": "Emperian",
       "type": "npc",
       "job": {
-        "title": "champion",
-        "attributes": ["con", "cha"],
-        "ressources": ["pv", "pk", "pe"],
-        "rank": 8,
-        "tradition": "",
-        "mastery": "while fighting multiple targets"
+        "title": "inquisitor",
+        "attributes": ["agi", "con"],
+        "ressources": ["pv", "pk", "pm"],
+        "tradition": "wil",
+        "mastery": "while using materias"
       },
       "adversity": {
-        "type": "enemy",
-        "bonus": 2
+        "type": "nemesis",
+        "bonus": 0
       },
       "affinity": {
-        "critical": ["con", "str"],
-        "high": ["cha", "dex"],
-        "mid": ["agi", "wil"],
-        "low": ["wis", "per"]
+        "critical": ["agi", "str"],
+        "high": ["con", "dex"],
+        "mid": ["wil", "per"],
+        "low": ["cha", "wit"]
       },
       "sub_attributes": {
-        "sta": 14,
-        "siz": 8,
-        "ego": 10,
-        "app": 10
+        "sta": 12,
+        "siz": 12,
+        "ego": 12,
+        "app": 12
       },
       "weaponry": {
         "upg": true,
         "primary": {
-          "name": "mace",
-          "cat": 3
+          "name": "scythe",
+          "cat": 4
         },
         "secundary": {},
         "defense": {
@@ -40,6 +39,19 @@
           "cat": 4,
           "imp": true
         }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Penetrating (-5) : Ignore 10 absorption",
+          "Sadistic (-6) : Double wound gravity if any on that spot"
+        ],
+        "actions": [
+          "(pre) Haste (Q5) materia level 5",
+          "Parry / Counter-Attack",
+          "Fire (Q5) materia level 5",
+          "Dispel (Q5) materia level 5"
+        ],
+        "style": "Adds 5 initiative to its checks when cloacked by shadows"
       }
     }
   ]

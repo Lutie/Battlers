@@ -1,3 +1,5 @@
+const attributes = ["str", "dex", "agi", "con", "per", "cha", "int", "wit", "wil", "wis", "sta", "siz", "ego", "app", "luk", "eqi", "mag"];
+
 export default function calculateUnit(unit) {
   // Npcs needs to be calculated
   if (unit.type === "npc") {
@@ -18,6 +20,9 @@ export default function calculateUnit(unit) {
       (unit.job.rank - 1) / 4
     );
   }
+  attributes.forEach((attribute) => {
+    unit.attributes[attribute] += getBonus(attribute, unit);
+  })
   // Ressources depends on attributes
   let pv_max =
     unit.attributes.con * 2 +
@@ -124,6 +129,7 @@ export default function calculateUnit(unit) {
         reflexes: getSave(unit, "agi", "reflexes"),
         composure: getSave(unit, "cun", "composure"),
         opposition: getSave(unit, "mag", "opposition"),
+        initiative: getSave(unit, "agi", "initiative"),
       },
     },
     unit
@@ -132,7 +138,7 @@ export default function calculateUnit(unit) {
 
 // Return modifier for a given attribute value
 export function getModifier(value, isDefense = false) {
-  return Math.floor((value - 10 + (isDefense ? 0 : 1)) / 2);
+  return Math.floor((value - 11 + (isDefense ? 0 : 1)) / 2);
 }
 
 // Return defense for a given attribute value
@@ -144,7 +150,15 @@ export function getDefense(value) {
 function getSave(unit, attributeName, skillName) {
   let skillBonus;
   if (unit.type === "npc") {
-    skillBonus = getSkillBasedOnAdversity(unit, "critical");
+    skillBonus = getSkillBasedOnAdversity(unit, "high");
+    if (skillName === 'initiative') {
+      if (unit.weaponry.primary.cat > 2) {
+        skillBonus -= unit.weaponry.primary.cat - 2;
+      }
+      if (unit.weaponry.defense.cat > 2) {
+        skillBonus -= unit.weaponry.defense.cat - 2;
+      }
+    }
   } else {
     skillBonus = unit.skills[skillName];
   }
@@ -223,16 +237,16 @@ function getSkillBasedOnAdversity(unit, quality) {
       levels = { vlow: 0, low: 1, mid: 1, high: 2, critical: 3 };
       break;
     case "enemy":
-      levels = { vlow: 0, low: 1, mid: 2, high: 4, critical: 5 };
+      levels = { vlow: 0, low: 1, mid: 2, high: 3, critical: 4 };
       break;
     case "adversary":
-      levels = { vlow: 1, low: 2, mid: 3, high: 4, critical: 6 };
+      levels = { vlow: 1, low: 2, mid: 3, high: 4, critical: 5 };
       break;
     case "nemesis":
-      levels = { vlow: 1, low: 2, mid: 4, high: 5, critical: 7 };
+      levels = { vlow: 1, low: 2, mid: 4, high: 5, critical: 6 };
       break;
     case "legend":
-      levels = { vlow: 2, low: 3, mid: 5, high: 6, critical: 8 };
+      levels = { vlow: 2, low: 3, mid: 5, high: 6, critical: 7 };
       break;
   }
   return levels[quality];

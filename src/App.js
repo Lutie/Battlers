@@ -41,17 +41,16 @@ function App() {
 
   // Handle battler changes
   const changesBattler = (type, who, about) => {
-    // const newGame = { ...game };
-    // const rType = type === "ally" ? "allies" : "foes";
-    // newGame[rType][who][about] +=
-    //   game.config.mode === "Minus" ? -game.config.value : +game.config.value;
-    // if (newGame[rType][who][about] > newGame[rType][who][`${about}_max`]) {
-    //   newGame[rType][who][about] = newGame[rType][who][`${about}_max`];
-    // }
-    // setGame(newGame);
-    // cookies.set("foes", newGame.foes);
-    // cookies.set("allies", newGame.allies);
-    // cookies.set("config", newGame.config);
+    const newGame = { ...game };
+    const rType = type === "ally" ? "allies" : "foes";
+    newGame[rType][who]["ressources"][about]["now"] +=
+      game.config.mode === "Minus" ? -game.config.value : +game.config.value;
+    if (newGame[rType][who]["ressources"][about]["now"] > newGame[rType][who]["ressources"][about]["max"]) {
+      newGame[rType][who]["ressources"][about]["now"] = newGame[rType][who]["ressources"][about]["max"];
+    }
+    setGame(newGame);
+    cookies.set("foes", newGame.foes);
+    cookies.set("allies", newGame.allies);
   };
 
   // Handle config changes
@@ -62,12 +61,10 @@ function App() {
   };
 
   const changesValue = (newValue) => {
-    // const newGame = { ...game };
-    // newGame.config.value = newValue;
-    // setGame(newGame);
-    // cookies.set("foes", newGame.foes);
-    // cookies.set("allies", newGame.allies);
-    // cookies.set("config", newGame.config);
+    const newGame = { ...game };
+    newGame.config.value = newValue;
+    setGame(newGame);
+    cookies.set("config", newGame.config);
   };
 
   // Load allies battlers
