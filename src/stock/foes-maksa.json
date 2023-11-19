@@ -1,0 +1,243 @@
+{
+  "foes" : [
+    {
+      "name": "Maksa",
+      "ethnic": "Naggan",
+      "type": "npc",
+      "job": {
+        "title": "Diacre",
+        "attributes": ["wis", "mag"],
+        "ressources": ["pm", "ps", "pk"],
+        "tradition": "wis",
+        "mastery": "while casting diacre's spells"
+      },
+      "adversity": {
+        "type": "adversary",
+        "bonus": 1
+      },
+      "affinity": {
+        "critical": ["wis", "agi"],
+        "high": ["cun", "int"],
+        "mid": ["cha", "per"],
+        "low": ["con", "dex"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 14,
+        "ego": 12,
+        "app": 12
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "kriss (DEX)",
+          "cat": 2
+        },
+        "secundary": {},
+        "defense": {
+          "name": "mail",
+          "cat": 3,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Slice (-2) : Advantage in attack",
+          "Quick (-x) : Adds x speed to attack"
+        ],
+        "actions": [
+          "(pre) Haste level 4 (-6PM)",
+          "(pre) Wind Dodge level 4 (-6PM) (teleport to birds if attacked, 4 times)",
+          "(pre) Wind Blade level 4 (adds 8 pts wind damage) (-6PM)",
+          "(pre) Summon Wind Elementals level 4 (-3x6PM)",
+          "Flee",
+          "Wind Gale level 4 (blow + damage + target) (6PM)",
+          "Wind Nova level 4 (blow + damage + PBAOE) (6PM)",
+          "Summon Tornados level 4",
+          "(special) Control Shadows (puzzle)"
+        ],
+        "style": "Adds 5 speed if attacking before its target (or none attacking ones)"
+      }
+    },
+    {
+      "name": "Wind Elemental Lv4",
+      "ethnic": "n/a",
+      "type": "npc",
+      "job": {
+        "title": "Elemental",
+        "attributes": ["agi", "cun"],
+        "ressources": ["pv", "pc", "pk"],
+        "tradition": "cun",
+        "mastery": "near wind"
+      },
+      "adversity": {
+        "type": "enemy",
+        "bonus": 4
+      },
+      "affinity": {
+        "critical": ["agi", "cun"],
+        "high": ["dex", "int"],
+        "mid": ["per", "wis"],
+        "low": ["str", "cha"]
+      },
+      "sub_attributes": {
+        "sta": 14,
+        "siz": 14,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "natural",
+          "cat": 2
+        },
+        "secundary": {},
+        "defense": {
+          "name": "natural",
+          "cat": 0,
+          "imp": false
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Attack and Push (-5) : Costs an additional 1ACTR, after attacking try to push with same roll and +5",
+          "Perforation Manoeuver (-4) : Gets bonus equal to target's STR (max 8)",
+          "Backstab (-4) : Damage +2d6 if attacks in the back"
+        ],
+        "actions": [
+          "(pre) Haste level 4 (-6PM)",
+          "(pre) Wind Force level 4 (-6PM) (+4 to all pushing difficulties)",
+          "Flee",
+          "Attacks while passing : Cost an additional 1ACTR, can attack while passing/flying, never lend a feet on ground",
+          "Grip : Try to take target higher to release it to its death",
+          "Wind Wings level 4 (blow + aoe) (6PM)"
+        ],
+        "style": "Adds 5 speed if attacking before its target (or none attacking ones)",
+        "passives": [
+          "came in game with 20 power spell"
+        ]
+      }
+    },
+    {
+      "name": "Wind Elemental Lv4",
+      "ethnic": "n/a",
+      "type": "npc",
+      "job": {
+        "title": "Elemental",
+        "attributes": ["agi", "cun"],
+        "ressources": ["pv", "pc", "pk"],
+        "tradition": "cun",
+        "mastery": "near wind"
+      },
+      "adversity": {
+        "type": "enemy",
+        "bonus": 4
+      },
+      "affinity": {
+        "critical": ["agi", "cun"],
+        "high": ["dex", "int"],
+        "mid": ["per", "wis"],
+        "low": ["str", "cha"]
+      },
+      "sub_attributes": {
+        "sta": 14,
+        "siz": 14,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "natural",
+          "cat": 2
+        },
+        "secundary": {},
+        "defense": {
+          "name": "natural",
+          "cat": 0,
+          "imp": false
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Attack and Push (-5) : Costs an additional 1ACTR, after attacking try to push with same roll and +5",
+          "Perforation Manoeuver (-4) : Gets bonus equal to target's STR (max 8)",
+          "Backstab (-4) : Damage +2d6 if attacks in the back"
+        ],
+        "actions": [
+          "(pre) Haste level 4 (-6PM)",
+          "(pre) Wind Force level 4 (-6PM) (+4 to all pushing difficulties)",
+          "Flee",
+          "Attacks while passing : Cost an additional 1ACTR, can attack while passing/flying, never lend a feet on ground",
+          "Grip : Try to take target higher to release it to its death",
+          "Wind Wings level 4 (blow + aoe) (6PM)"
+        ],
+        "style": "Adds 5 speed if attacking before its target (or none attacking ones)",
+        "passives": [
+          "came in game with 20 power spell"
+        ]
+      }
+    },
+    {
+      "name": "Wind Elemental Lv4",
+      "ethnic": "n/a",
+      "type": "npc",
+      "job": {
+        "title": "Elemental",
+        "attributes": ["agi", "cun"],
+        "ressources": ["pv", "pc", "pk"],
+        "tradition": "cun",
+        "mastery": "near wind"
+      },
+      "adversity": {
+        "type": "enemy",
+        "bonus": 4
+      },
+      "affinity": {
+        "critical": ["agi", "cun"],
+        "high": ["dex", "int"],
+        "mid": ["per", "wis"],
+        "low": ["str", "cha"]
+      },
+      "sub_attributes": {
+        "sta": 14,
+        "siz": 14,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "natural",
+          "cat": 2
+        },
+        "secundary": {},
+        "defense": {
+          "name": "natural",
+          "cat": 0,
+          "imp": false
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Attack and Push (-5) : Costs an additional 1ACTR, after attacking try to push with same roll and +5",
+          "Perforation Manoeuver (-4) : Gets bonus equal to target's STR (max 8)",
+          "Backstab (-4) : Damage +2d6 if attacks in the back"
+        ],
+        "actions": [
+          "(pre) Haste level 4 (-6PM)",
+          "(pre) Wind Force level 4 (-6PM) (+4 to all pushing difficulties)",
+          "Flee",
+          "Attacks while passing : Cost an additional 1ACTR, can attack while passing/flying, never lend a feet on ground",
+          "Grip : Try to take target higher to release it to its death",
+          "Wind Wings level 4 (blow + aoe) (6PM)"
+        ],
+        "style": "Adds 5 speed if attacking before its target (or none attacking ones)",
+        "passives": [
+          "came in game with 20 power spell"
+        ]
+      }
+    }
+  ]
+}

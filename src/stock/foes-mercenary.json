@@ -1,0 +1,521 @@
+{
+  "foes" : [
+    {
+      "name": "Short Sword Mercenary",
+      "ethnic": "Emperian",
+      "type": "npc",
+      "job": {
+        "title": "Mercenary",
+        "attributes": ["str", "dex"],
+        "ressources": ["pv", "pv", "pk"],
+        "tradition": "",
+        "mastery": "attacking same target as another ally"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["str", "dex"],
+        "high": ["con", "agi"],
+        "mid": ["per", "cun"],
+        "low": ["wil", "wis"]
+      },
+      "sub_attributes": {
+        "sta": 12,
+        "siz": 10,
+        "ego": 12,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "Short Sword",
+          "cat": 3
+        },
+        "secundary": {},
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": false
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Slice (-2) : Advantage in attack"
+        ],
+        "actions": [
+          "Parrying",
+          "Synchronized attacks against same targets"
+        ],
+        "style": "Gets +1 when attacking a target which is against multiple enemies"
+      }
+    },
+    {
+      "name": "Broad Sword Mercenary",
+      "ethnic": "Emperian",
+      "type": "npc",
+      "job": {
+        "title": "Mercenary",
+        "attributes": ["str", "dex"],
+        "ressources": ["pv", "pv", "pk"],
+        "tradition": "",
+        "mastery": "attacking same target as another ally"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["str", "dex"],
+        "high": ["con", "agi"],
+        "mid": ["per", "cun"],
+        "low": ["wil", "wis"]
+      },
+      "sub_attributes": {
+        "sta": 12,
+        "siz": 10,
+        "ego": 12,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "Broad Sword",
+          "cat": 4
+        },
+        "secundary": {},
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": false
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Slice (-2) : Advantage in attack",
+          "Embarrassing (-4) : throw -2d6 but targets looses 1d6 initiative"
+        ],
+        "actions": [
+          "Parrying",
+          "Synchronized attacks against same targets"
+        ],
+        "style": "Gets +1 when attacking a target which is against multiple enemies"
+      }
+    },
+    {
+      "name": "Hand Axe Mercenary",
+      "ethnic": "Emperian",
+      "type": "npc",
+      "job": {
+        "title": "Mercenary",
+        "attributes": ["str", "dex"],
+        "ressources": ["pv", "pv", "pk"],
+        "tradition": "",
+        "mastery": "attacking same target as another ally"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["str", "dex"],
+        "high": ["con", "agi"],
+        "mid": ["per", "cun"],
+        "low": ["wil", "wis"]
+      },
+      "sub_attributes": {
+        "sta": 12,
+        "siz": 10,
+        "ego": 12,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "Hand Axe",
+          "cat": 4
+        },
+        "secundary": {},
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": false
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Slice (-2) : Advantage in attack"
+        ],
+        "actions": [
+          "Parrying",
+          "Synchronized attacks against same targets"
+        ],
+        "style": "Gets +1 when attacking a target which is against multiple enemies"
+      }
+    },
+    {
+      "name": "Sniper Mercenary",
+      "ethnic": "Emperian",
+      "type": "npc",
+      "job": {
+        "title": "Sniper",
+        "attributes": ["per", "dex"],
+        "ressources": ["pc", "pc", "pk"],
+        "tradition": "",
+        "mastery": "attacking same target as another ally"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["per", "dex"],
+        "high": ["agi", "wis"],
+        "mid": ["cun", "con"],
+        "low": ["wil", "int"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "Short Bow",
+          "cat": 3
+        },
+        "secundary": {},
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": false
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Backstab (-2) : Adds 1d6 damage when attacking in the back",
+          "Flawless (-2) : Defenses difficulty +4",
+          "Simple (+1) : Can't double it",
+          "Worked out (+1) : Speed -3"
+        ],
+        "actions": [
+          "Parrying",
+          "Synchronized attacks against same targets"
+        ],
+        "style": "Gets +1 when attacking a target which is against multiple enemies"
+      }
+    },
+    {
+      "name": "Sniper Mercenary 2",
+      "ethnic": "Emperian",
+      "type": "npc",
+      "job": {
+        "title": "Sniper",
+        "attributes": ["per", "dex"],
+        "ressources": ["pc", "pc", "pk"],
+        "tradition": "",
+        "mastery": "attacking same target as another ally"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 0
+      },
+      "affinity": {
+        "critical": ["per", "dex"],
+        "high": ["agi", "wis"],
+        "mid": ["cun", "con"],
+        "low": ["wil", "int"]
+      },
+      "sub_attributes": {
+        "sta": 10,
+        "siz": 10,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "Short Bow",
+          "cat": 3
+        },
+        "secundary": {},
+        "defense": {
+          "name": "leather",
+          "cat": 2,
+          "imp": false
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Backstab (-2) : Adds 1d6 damage when attacking in the back",
+          "Flawless (-2) : Defenses difficulty +4",
+          "Simple (+1) : Can't double it",
+          "Worked out (+1) : Speed -3"
+        ],
+        "actions": [
+          "Parrying",
+          "Synchronized attacks against same targets"
+        ],
+        "style": "Gets +1 when attacking a target which is against multiple enemies"
+      }
+    },
+    {
+      "name": "Elemental of Blood",
+      "ethnic": "Monster",
+      "type": "npc",
+      "job": {
+        "title": "elemental",
+        "attributes": ["str", "con"],
+        "ressources": [],
+        "tradition": "",
+        "mastery": "none"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 4
+      },
+      "affinity": {
+        "critical": ["str", "con"],
+        "high": ["agi", "per"],
+        "mid": ["dex", "run"],
+        "low": ["wil", "wis"]
+      },
+      "sub_attributes": {
+        "sta": 12,
+        "siz": 12,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "natural",
+          "cat": 2
+        },
+        "defense": {
+          "name": "natural",
+          "cat": 0,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          ""
+        ],
+        "actions": [
+          ""
+        ],
+        "passives": [
+          "came in game with 20 power spell"
+        ]
+      }
+    },
+    {
+      "name": "Elemental of Blood",
+      "ethnic": "Monster",
+      "type": "npc",
+      "job": {
+        "title": "elemental",
+        "attributes": ["str", "con"],
+        "ressources": [],
+        "tradition": "",
+        "mastery": "none"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 4
+      },
+      "affinity": {
+        "critical": ["str", "con"],
+        "high": ["agi", "per"],
+        "mid": ["dex", "run"],
+        "low": ["wil", "wis"]
+      },
+      "sub_attributes": {
+        "sta": 12,
+        "siz": 12,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "natural",
+          "cat": 2
+        },
+        "defense": {
+          "name": "natural",
+          "cat": 0,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          ""
+        ],
+        "actions": [
+          ""
+        ],
+        "passives": [
+          "came in game with 20 power spell"
+        ]
+      }
+    },
+    {
+      "name": "Elemental of Blood",
+      "ethnic": "Monster",
+      "type": "npc",
+      "job": {
+        "title": "elemental",
+        "attributes": ["str", "con"],
+        "ressources": [],
+        "tradition": "",
+        "mastery": "none"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 4
+      },
+      "affinity": {
+        "critical": ["str", "con"],
+        "high": ["agi", "per"],
+        "mid": ["dex", "run"],
+        "low": ["wil", "wis"]
+      },
+      "sub_attributes": {
+        "sta": 12,
+        "siz": 12,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "natural",
+          "cat": 2
+        },
+        "defense": {
+          "name": "natural",
+          "cat": 0,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          ""
+        ],
+        "actions": [
+          ""
+        ],
+        "passives": [
+          "came in game with 20 power spell"
+        ]
+      }
+    },
+    {
+      "name": "Elemental of Darkness",
+      "ethnic": "Monster",
+      "type": "npc",
+      "job": {
+        "title": "elemental",
+        "attributes": ["agi", "per"],
+        "ressources": [],
+        "tradition": "",
+        "mastery": "none"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 4
+      },
+      "affinity": {
+        "critical": ["agi", "per"],
+        "high": ["dex", "cun"],
+        "mid": ["dex", "cha"],
+        "low": ["wis", "con"]
+      },
+      "sub_attributes": {
+        "sta": 14,
+        "siz": 14,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "natural",
+          "cat": 2
+        },
+        "defense": {
+          "name": "natural",
+          "cat": 0,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Penetrating (-3) : Ignore 6 absorption"
+        ],
+        "actions": [
+          "???"
+        ],
+        "passives": [
+          "came in game with 15 power spell"
+        ]
+      }
+    },
+    {
+      "name": "Elemental of Darkness",
+      "ethnic": "Monster",
+      "type": "npc",
+      "job": {
+        "title": "elemental",
+        "attributes": ["agi", "per"],
+        "ressources": [],
+        "tradition": "",
+        "mastery": "none"
+      },
+      "adversity": {
+        "type": "sbire",
+        "bonus": 4
+      },
+      "affinity": {
+        "critical": ["agi", "per"],
+        "high": ["dex", "cun"],
+        "mid": ["dex", "cha"],
+        "low": ["wis", "con"]
+      },
+      "sub_attributes": {
+        "sta": 14,
+        "siz": 14,
+        "ego": 10,
+        "app": 10
+      },
+      "weaponry": {
+        "upg": true,
+        "primary": {
+          "name": "natural",
+          "cat": 2
+        },
+        "defense": {
+          "name": "natural",
+          "cat": 0,
+          "imp": true
+        }
+      },
+      "strategy": {
+        "maneuvers": [
+          "Penetrating (-3) : Ignore 6 absorption"
+        ],
+        "actions": [
+          "???"
+        ],
+        "passives": [
+          "came in game with 15 power spell"
+        ]
+      }
+    }
+  ]
+}
